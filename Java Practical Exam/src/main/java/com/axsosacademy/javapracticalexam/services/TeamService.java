@@ -30,13 +30,13 @@ public class TeamService {
 
     // Delete Team
     public void deleteTeamById(Long id) {
-        Team team = teamRepository.findById(id).orElse(null);
-        if (team != null) {
-            for (Player player : team.getPlayers()) {
-                player.setTeam(null);
-            }
-            teamRepository.save(team);
-        }
+//        Team team = teamRepository.findById(id).orElse(null);
+//        if (team != null) {
+//            for (Player player : team.getPlayers()) {
+//                player.setTeam(null);
+//            }
+//            teamRepository.save(team);
+//        }
         teamRepository.deleteById(id);
     }
 }

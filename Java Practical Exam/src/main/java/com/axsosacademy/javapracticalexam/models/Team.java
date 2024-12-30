@@ -34,7 +34,7 @@ public class Team {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "team")
+    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL)
     private List<Player> players = new ArrayList<>();
 
     @Column(updatable = false)
